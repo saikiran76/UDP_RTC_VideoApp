@@ -1,6 +1,6 @@
 // express stuff
 const app = require('./server').app;
-const jwt = require("jsonwebtoken")
+const jwt = require('jsonwebtoken')
 const secret = "goofy###331@468998"
 
 // this route is for us! In production, a calender/scheduling app would send this out
@@ -11,7 +11,7 @@ app.get('/user-link', (req, res)=>{
     // data for the end user's appointment
     const appData = {
         professionalsName: "Ripper",
-        appointmentDate: Date.now()
+        appointmentDate: Date.now() + 500000
     }
 
     // we need to encode this data on a token
